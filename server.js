@@ -15,7 +15,7 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 
 
-app.use(medthodOverride("_method"));
+// app.use(medthodOverride("_method"));
 
 // Requiring our models for syncing
 var db = require("./models");
