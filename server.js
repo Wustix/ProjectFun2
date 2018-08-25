@@ -22,12 +22,12 @@ var db = require("./models");
 
 
 // Handlebars config
-app.engine(
-  "handlebars",
-  exphbs({
-    defaultLayout: "main"
-  })
-);
+// app.engine(
+//   "handlebars",
+//   exphbs({
+//     defaultLayout: "main"
+//   })
+// );
 // app.set("viwe engine", "handlebars");
 
 // Sets up the Express app to handle data parsing
