@@ -3,14 +3,14 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
-var medthodOverride = require("method-overried");
+// var medthodOverride = require("method-overried");
 
 // Sets up the Express App
 var app = express();
 var PORT = process.env.PORT || 8080;
 
 // Method override for RESTFUL form submissions
-app.use(medthodOverride("_method"));
+// app.use(medthodOverride("_method"));
 
 
 // Requiring our models for syncing
@@ -37,9 +37,8 @@ app.set("viwe engine", "handlebars");
 
 // Routes
 // =============================================================
-require("./routes/html-routes.js")(app);
-require("./routes/author-api-routes.js")(app);
-require("./routes/post-api-routes.js")(app);
+require("./routes/htmlRoutes.js")(app);
+require("./routes/apiRoutes.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
