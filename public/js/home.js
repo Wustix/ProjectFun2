@@ -37,7 +37,7 @@ $(document).ready(function() {
       });
   }
 
-  // Getting the initial list of posts
+  //Getting the initial list of posts
   getPosts();
   // InitializeRows handles appending all of our constructed post HTML inside
   // homeContainer
