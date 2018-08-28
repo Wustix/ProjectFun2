@@ -1,21 +1,32 @@
 {
-  "name": "blog-crud",
+  "name": "reg-nest",
+  "name": "app.js",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "watch": "nodemon server.js"
+   
+   
+    "license": "ISC",
+    "dependencies": {
+      "body-parser": "^1.18.3",
+      "cookie-session": "^2.0.0-beta.3",
+      "express": "^4.16.3",
+      "mysql2": "^1.3.6",
+      "passport": "^0.4.0",
+      "passport-google-oauth20": "^1.0.0",
+      "path": "^0.12.7",
+      "sequelize": "^4.38.0"
+    }
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.3",
-    "mysql2": "^1.3.6",
-    "path": "^0.12.7",
-    "sequelize": "^4.38.0"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wustix/ProjectFun2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Wustix/ProjectFun2/issues"
+  },
+  "homepage": "https://github.com/Wustix/ProjectFun2#readme",
+  "description": ""
 }
