@@ -1,13 +1,10 @@
 {
-  "name": "reg-nest",
   "name": "app.js",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-   
-   
     "license": "ISC",
     "dependencies": {
       "body-parser": "^1.18.3",
@@ -27,6 +24,5 @@
   "bugs": {
     "url": "https://github.com/Wustix/ProjectFun2/issues"
   },
-  "homepage": "https://github.com/Wustix/ProjectFun2#readme",
-  "description": ""
+  "homepage": "https://github.com/Wustix/ProjectFun2#readme"
 }

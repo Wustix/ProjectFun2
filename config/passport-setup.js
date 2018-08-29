@@ -17,7 +17,7 @@ passport.use(
         callbackURL: "/auth/google/redirect",
         clientID: keys.google.clientID,
         clientSecret: keys.google.clientSecret
-    }, (accessToken, refreshToken, profile, done) => {
+    }), (accessToken, refreshToken, profile, done) => {
         //  check if user already exists in our db
         User.findOne({ googleId: profile.id }).then((currentUser) => {
             if (currentUser) {
@@ -35,3 +35,5 @@ passport.use(
                 });
             }
         });
+    }
+)
