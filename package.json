@@ -5,15 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-<<<<<<< HEAD
-   
-   
-     "license": "ISC",
-      "dependencies": {
-=======
     "license": "ISC",
     "dependencies": {
->>>>>>> a0824fc7aa7909648caa72fe8303bd8c903e62b7
       "body-parser": "^1.18.3",
       "cookie-session": "^2.0.0-beta.3",
       "express": "^4.16.3",
@@ -31,9 +24,6 @@
   "bugs": {
     "url": "https://github.com/Wustix/ProjectFun2/issues"
   },
-<<<<<<< HEAD
-  "homepage": "https://github.com/Wustix/ProjectFun2#readme"
-=======
   "homepage": "https://github.com/Wustix/ProjectFun2#readme",
   "dependencies": {
     "array-flatten": "^2.1.1",
@@ -58,5 +48,4 @@
     "sequelize": "^4.38.0",
     "utils-merge": "^1.0.1"
   }
->>>>>>> 7371b37e01779b0bffb0b4a96bc8738dbc08c916
 }
