@@ -24,8 +24,6 @@
   "bugs": {
     "url": "https://github.com/Wustix/ProjectFun2/issues"
   },
-
-  
   "homepage": "https://github.com/Wustix/ProjectFun2#readme",
   "dependencies": {
     "array-flatten": "^2.1.1",
@@ -50,5 +48,7 @@
     "sequelize": "^4.38.0",
     "utils-merge": "^1.0.1"
   }
+
+
 
 }
