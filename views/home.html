@@ -1,0 +1,16 @@
+<!-- Need to add this link so that it links to the homepage -->
+<nav>
+    <ul>
+   <!-- creates the route -->
+    <% if (user) { % >
+   <li><a href="/auth/logout">Logout</a></li>
+   <%} else { %>
+   <li><a href="/auth/login">Login</a></li>
+   < %} %>
+   <li><a href="/">Hompage</a></li>
+   <li><a href="/profile">Profile</a></li>
+    </ul>
+    </nav>
+    <!-- This is conditionally showing what we want in our application----if we login....then the logout button doesn't show until after we log in... -->
+   <!-- options of showing the buttons---optional choices....google passport video #20 --> 
+     
