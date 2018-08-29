@@ -1,17 +1,44 @@
-button.submit {
-  float: right;
+body{
+  background-image: url("images/Lightning Bolt 4.jpg");
+}
+.jumbotron {
+  float: none;
+  text-align: center;
+  background-color: #fcf2bd;
+  padding-bottom: 20px;
+  padding-top: 0;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-form#cms {
-  margin-top: 50px;
+h1{
+  font:bold;
 }
 
-#cms textarea {
-  resize: none;
+.side-nav{
+  background-color: whitesmoke;
+  float: left;
+  text-align: left;
+  padding-bottom: 100%;
+  clear:left;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.card-header button.delete,
-button.edit {
-  float: right;
-  margin: 5px;
+.fab{
+  font-size: 80px;    
+  color: black;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  color: black;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.search-container button{
+  float:left;
 }
