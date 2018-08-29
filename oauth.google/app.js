@@ -2,7 +2,7 @@ const express = require("express");
 const authRoutes = require("./routes/auth-routes");
 const profileRoutes = require("./routes/profile-routes");
 const passportSetup = require("./config/passport-setup");
-// const jawsdb = require("jawsdb");
+var mongoose = require("mongooese");
 const keys = require("./config/keys");
 const coookieSession = require("cookie-session");
 const passport = require("passport");
@@ -21,7 +21,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // connect to jawsdb here--may need to tweek this a bit to connect our db
-jawsdb.connect(keys.jawsdb.dbURI, () => {
+mongoose.connect(keys.mongo.dbURI, () => {
     console.log("conected to db");
 });
 // set up routes
