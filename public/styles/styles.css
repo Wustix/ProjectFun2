@@ -1,3 +1,44 @@
-.list-group-item {
-  line-height: 2.5;
+body{
+  background-image: url("images/Lightning Bolt 4.jpg");
+}
+.jumbotron {
+  float: none;
+  text-align: center;
+  background-color: #fcf2bd;
+  padding-bottom: 20px;
+  padding-top: 0;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h1{
+  font:bold;
+}
+
+.side-nav{
+  background-color: whitesmoke;
+  float: left;
+  text-align: left;
+  padding-bottom: 100%;
+  clear:left;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.fab{
+  font-size: 80px;    
+  color: black;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  color: black;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.search-container button{
+  float:left;
 }
