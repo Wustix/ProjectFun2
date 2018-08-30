@@ -1,6 +1,12 @@
 body{
-  background-image: url("../images/Lightning Bolt 4.jpg");
+  background-color: #8f8f8f; 
+  background-image: linear-gradient(to bottom right, lightblue, green); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
 }
+
 .jumbotron {
   float: none;
   text-align: center;
@@ -41,4 +47,9 @@ footer {
 
 .search-container button{
   float:left;
+}
+
+.card-body {
+  width: 750px;
+  
 }
