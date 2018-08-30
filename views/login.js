@@ -1,8 +1,9 @@
+<html>
+
 // Needs to be added to the html-buttons
 // routes
 <nav>
 <ul>
-<!-- creates the route -->
  
 <li><a href="/auth/logout">Logout</a></li>
 <li><a href="/auth/login">Login</a></li>
@@ -11,7 +12,10 @@
  </ul>
  </nav>
  // This is the route we use to login with google
- <main>
+ 
+
+
+
 <a class="google-btn" href="/auth/google">Google</a>
- </main> 
-  
+ 
+ </html> 
