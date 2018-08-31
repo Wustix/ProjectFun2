@@ -11,5 +11,6 @@ CREATE DATABASE Reg_Nest_db;
 	price_list INTEGER (6),
 	description_list VARCHAR (255),
     email_list VARCHAR (100),
+	photo_list VARCHAR (150),
     PRIMARY KEY (id)
 );

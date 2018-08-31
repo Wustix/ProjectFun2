@@ -43,6 +43,8 @@ module.exports = function(app) {
     console.log(req.body);
     db.Post.create({
       title: req.body.title,
+      price: req.body.price,
+      photo: req.body.photo,
       body: req.body.body,
       category: req.body.category
     })
