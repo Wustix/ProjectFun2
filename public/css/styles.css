@@ -54,3 +54,14 @@ footer {
   
 }
 
+<<<<<<< HEAD
+=======
+.container{
+  float: left;
+}
+
+.submit{
+  position: relative;
+}
+
+>>>>>>> e7e429b349b9f4268f2320fc41b90cc9023e7f87
