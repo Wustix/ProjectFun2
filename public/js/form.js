@@ -28,6 +28,14 @@ $(document).ready(function() {
     // Wont submit the post if we are missing a body or a title
     if (!titleInput.val().trim() || !emailInput.val().trim() || !priceInput.val().trim() || !photoInput.val().trim() || !bodyInput.val().trim()) {
       return;
+
+      
+    }
+    var max_chars = 150;
+    if(emailInput > max_chars) {
+      alert("Description is over 150 characters.");
+      return;
+
     }
     // Constructing a newPost object to hand to the database
     var newPost = {
