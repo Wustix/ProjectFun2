@@ -8,17 +8,17 @@ module.exports = function (sequelize, DataTypes) {
       }
     },
     price: {
-      type: DataTypes.STRING,
-      allowNull: true,
+      type: DataTypes.INTEGER,
+      allowNull: false,
       validate: {
-        len: [1]
+        
       }
     },
     photo: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
       validate: {
-        len: [1]
+        
       }
     },
     body: {
