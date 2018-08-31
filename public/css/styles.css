@@ -54,6 +54,11 @@ footer {
   
 }
 
-.fab{
-  font-size: 25px;
+.container{
+  float: left;
 }
+
+.submit{
+  position: relative;
+}
+
