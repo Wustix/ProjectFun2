@@ -80,6 +80,7 @@ $(document).ready(function() {
     newPostTitle.text(post.title + " ");
     newPostPrice.text("$ " + post.price)
     newPostPhoto.attr("src", post.photo)
+    newPostPhoto.css("height", "50px", "width", "50px")
     newPostBody.text(post.body);
     var formattedDate = new Date(post.createdAt);
     formattedDate = moment(formattedDate).format("     MMMM Do YYYY");
