@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Otis13jhawkhalo",
-    "database": "project_2",
+    "password": "Memphis40",
+    "database": "Reg_Nes_db",
     "host": "127.0.0.1",
     "port": 3306,
     "dialect": "mysql"
