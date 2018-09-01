@@ -65,7 +65,8 @@ $(document).ready(function() {
     // editBtn.addClass("edit btn btn-default");
     var newPostTitle = $("<h2>");
     var newPostEmail = $("<button>");
-    newPostCard.addClass("emailButton");
+    newPostEmail.addClass("emailButton");
+    newPostEmail.attr("href", "email")
     var newPostPrice = $("<h3>");
     var newPostPhoto = $("<img>");
     var newPostDate = $("<small>");
