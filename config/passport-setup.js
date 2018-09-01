@@ -1,8 +1,8 @@
 const passport = require("passport");
-const GoogleStrategy = require("passport-google-oauth20");
+const GoogleStrategy = require("passport-google-oauth20").Strategy
 const keys = require("./keys");
 const User = require("../models/user-model");
-var mongoose = require("mongooese");
+var mongoose = require("mongoose");
 passport.serializeUser((user, done) => {
     done(null, user.id);
 });
@@ -13,13 +13,15 @@ passport.deserializeUser((id, done) => {
     });
 });
 passport.use(
-    new GoogleStrategy({
-        callbackURL: "/auth/google/redirect",
+    new GoogleStrategy ({
         clientID: keys.google.clientID,
-        clientSecret: keys.google.clientSecret
-    }), (accessToken, refreshToken, profile, done) => {
+        clientSecret: keys.google.clientSecret,
+        callbackURL: "/auth/google/redirect"
+    }, (accessToken, refreshToken, profile, done) => {
+        console.log("tokens",accessToken, refreshToken);
         //  check if user already exists in our db
-        User.findOne({ googleId: profile.id }).then((currentUser) => {
+        console.log("authnticate with google");
+        /* User.findOne({ googleId: profile.id }).then((currentUser) => {
             if (currentUser) {
                 // already have the user
                 console.log("user is: ", currentUser);
@@ -34,6 +36,6 @@ passport.use(
                     done(null.newUser);
                 });
             }
-        });
-    }
+        }); */
+    })
 )

@@ -11,7 +11,7 @@ const app = express();
 // set up view engine
 
 
-app.set("view engine");
+app.set("view engine","ejs");
 app.use(coookieSession({
     maxAge: 24 * 60 * 60 * 1000,
     keys: [keys.session.cookieKey]
@@ -33,6 +33,6 @@ app.use("/profile", profileRoutes);
 app.get("/", (req, res) => {
     res.render("home", { user: req.user });
 });
-app.listen(8080, () => {
-    console.log("app now listening for requests on port 8080");
+app.listen(8000, () => {
+    console.log("app now listening for requests on port 8000");
 }); 
