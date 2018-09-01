@@ -13,12 +13,12 @@ $(document).ready(function() {
   
   $(form).on("submit", function handleFormSubmit(event) {
     event.preventDefault();
-    var max_chars = 150;
-    if(emailMessage > max_chars) {
-      alert("Message is over 150 characters.");
-      return;
+    // var max_chars = 150;
+    // if(emailMessage > max_chars) {
+    //   alert("Message is over 150 characters.");
+    //   return;
 
-    }
+    // }
     // Constructing a newPost object to hand to the database
     var newEmail = {
       emailName: emailName.val(),

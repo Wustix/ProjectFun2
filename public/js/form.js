@@ -26,7 +26,7 @@ $(document).ready(function() {
   $(cmsForm).on("submit", function handleFormSubmit(event) {
     event.preventDefault();
     // Wont submit the post if we are missing a body or a title
-    if (!titleInput.val().trim() || !emailInput.val().trim() || !priceInput.val().trim() || !photoInput.val().trim() || !bodyInput.val().trim()) {
+    if (!titleInput.val().trim() || !priceInput.val().trim() || !photoInput.val().trim() || !bodyInput.val().trim()) {
       return;
 
       

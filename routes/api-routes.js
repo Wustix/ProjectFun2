@@ -1,10 +1,18 @@
 
 // Requiring our Todo model
 var db = require("../models");
+var bodyParser = require("body-parser");
+var nodemailer = require("nodemailer");
+
 
 // Routes
 // =============================================================
 module.exports = function(app) {
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }));
+// parse application/json
+app.use(bodyParser.json());
 
   app.post('/send', (req, res) => {
     const output = `
@@ -85,6 +93,7 @@ module.exports = function(app) {
     console.log(req.body);
     db.Post.create({
       title: req.body.title,
+      email: req.body.email,
       price: req.body.price,
       photo: req.body.photo,
       body: req.body.body,
