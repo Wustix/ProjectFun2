@@ -3,8 +3,8 @@ $(document).ready(function() {
   var blogContainer = $(".home-container");
   var postCategorySelect = $("#category");
   // Click events for the edit and delete buttons
-  $(document).on("click", "button.delete", handlePostDelete);
-  $(document).on("click", "button.edit", handlePostEdit);
+  // $(document).on("click", "button.delete", handlePostDelete);
+  // $(document).on("click", "button.edit", handlePostEdit);
   postCategorySelect.on("change", handleCategoryChange);
   var posts;
 
@@ -57,12 +57,12 @@ $(document).ready(function() {
     newPostCard.addClass("col-sm-4");
     var newPostCardHeading = $("<div>");
     newPostCardHeading.addClass("card-header");
-    var deleteBtn = $("<button>");
-    deleteBtn.text("x");
-    deleteBtn.addClass("delete btn btn-danger");
-    var editBtn = $("<button>");
-    editBtn.text("EDIT");
-    editBtn.addClass("edit btn btn-default");
+    // var deleteBtn = $("<button>");
+    // deleteBtn.text("x");
+    // deleteBtn.addClass("delete btn btn-danger");
+    // var editBtn = $("<button>");
+    // editBtn.text("EDIT");
+    // editBtn.addClass("edit btn btn-default");
     var newPostTitle = $("<h2>");
     var newPostEmail = $("<button>");
     newPostEmail.addClass("emailButton");
@@ -82,18 +82,22 @@ $(document).ready(function() {
     newPostCardBody.addClass("card-body");
     var newPostBody = $("<p>");
     newPostTitle.text(post.title + " ");
+    newPostEmail.text(post.email);
     newPostPrice.text("$ " + post.price)
     newPostPhoto.attr("src", post.photo)
+    newPostPhoto.css("height", "150px", "width", "150px")
     newPostBody.text(post.body);
     var formattedDate = new Date(post.createdAt);
     formattedDate = moment(formattedDate).format("     MMMM Do YYYY");
     newPostDate.text(formattedDate);
     newPostTitle.append(newPostDate);
+    newPostEmail.append(newPostDate);
     newPostPrice.append(newPostDate);
     newPostPhoto.append(newPostDate);
     // newPostCardHeading.append(deleteBtn);
     // newPostCardHeading.append(editBtn);
     newPostCardHeading.append(newPostTitle);
+    newPostCardHeading.append(newPostEmail);
     newPostCardHeading.append(newPostPrice);
     newPostCardHeading.append(newPostPhoto);
     newPostCardBody.append(newPostBody);
@@ -104,24 +108,24 @@ $(document).ready(function() {
   }
 
   // This function figures out which post we want to delete and then calls
-  // deletePost
-  function handlePostDelete() {
-    var currentPost = $(this)
-      .parent()
-      .parent()
-      .data("post");
-    deletePost(currentPost.id);
-  }
+  // // deletePost
+  // function handlePostDelete() {
+  //   var currentPost = $(this)
+  //     .parent()
+  //     .parent()
+  //     .data("post");
+  //   deletePost(currentPost.id);
+  // }
 
-  // This function figures out which post we want to edit and takes it to the
-  // Appropriate url
-  function handlePostEdit() {
-    var currentPost = $(this)
-      .parent()
-      .parent()
-      .data("post");
-    window.location.href = "/form?post_id=" + currentPost.id;
-  }
+  // // This function figures out which post we want to edit and takes it to the
+  // // Appropriate url
+  // function handlePostEdit() {
+  //   var currentPost = $(this)
+  //     .parent()
+  //     .parent()
+  //     .data("post");
+  //   window.location.href = "/form?post_id=" + currentPost.id;
+  // }
 
   // This function displays a message when there are no posts
   function displayEmpty() {
