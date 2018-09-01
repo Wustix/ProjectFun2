@@ -54,6 +54,7 @@ $(document).ready(function() {
   function createNewRow(post) {
     var newPostCard = $("<div>");
     newPostCard.addClass("card");
+    newPostCard.addClass("col-sm-4");
     var newPostCardHeading = $("<div>");
     newPostCardHeading.addClass("card-header");
     var deleteBtn = $("<button>");
@@ -63,6 +64,9 @@ $(document).ready(function() {
     editBtn.text("EDIT");
     editBtn.addClass("edit btn btn-default");
     var newPostTitle = $("<h2>");
+    var newPostEmail = $("<button>");
+    newPostEmail.addClass("emailButton");
+    newPostEmail.attr("href", "email")
     var newPostPrice = $("<h3>");
     var newPostPhoto = $("<img>");
     var newPostDate = $("<small>");
@@ -87,8 +91,8 @@ $(document).ready(function() {
     newPostTitle.append(newPostDate);
     newPostPrice.append(newPostDate);
     newPostPhoto.append(newPostDate);
-    newPostCardHeading.append(deleteBtn);
-    newPostCardHeading.append(editBtn);
+    // newPostCardHeading.append(deleteBtn);
+    // newPostCardHeading.append(editBtn);
     newPostCardHeading.append(newPostTitle);
     newPostCardHeading.append(newPostPrice);
     newPostCardHeading.append(newPostPhoto);
