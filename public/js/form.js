@@ -15,7 +15,6 @@ $(document).ready(function() {
   // Getting jQuery references to the post body, title, form, and category select
   var bodyInput = $("#body");
   var titleInput = $("#title");
-  var emailInput = $("#email");
   var priceInput = $("#price");
   var photoInput = $("#photo");
   var cmsForm = $("#cms");
@@ -26,13 +25,12 @@ $(document).ready(function() {
   $(cmsForm).on("submit", function handleFormSubmit(event) {
     event.preventDefault();
     // Wont submit the post if we are missing a body or a title
-    if (!titleInput.val().trim() || !emailInput.val().trim() || !priceInput.val().trim() || !photoInput.val().trim() || !bodyInput.val().trim()) {
+    if (!titleInput.val().trim() || !priceInput.val().trim() || !photoInput.val().trim() || !bodyInput.val().trim()) {
       return;
     }
     // Constructing a newPost object to hand to the database
     var newPost = {
       title: titleInput.val().trim(),
-      email: emailInput.val().trim(),
       price: priceInput.val().trim(),
       photo: photoInput.val().trim(),
       body: bodyInput.val().trim(),
@@ -65,7 +63,6 @@ $(document).ready(function() {
       if (data) {
         // If this post exists, prefill our cms forms with its data
         titleInput.val(data.title);
-        emailInput.val(data.email);
         priceInput.val(data.price)
         bodyInput.val(data.body);
         postCategorySelect.val(data.category);
