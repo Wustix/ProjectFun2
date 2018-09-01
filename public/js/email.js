@@ -10,16 +10,17 @@ $(document).ready(function() {
   var emailEmail = $("#emailEmail");
   var emailMessage= $("#emailMessage");
   var emailToEmail = $(".emailButton");
+
   
   $(form).on("submit", function handleFormSubmit(event) {
     event.preventDefault();
-    var max_chars = 150;
-    if(emailMessage > max_chars) {
-      alert("Message is over 150 characters.");
-      return;
+    // var max_chars = 150;
+    // if(emailMessage > max_chars) {
+    //   alert("Message is over 150 characters.");
+    //   return;
 
-    }
-    // Constructing a newPost object to hand to the database
+    // }
+    // Constructing a newPost object to hand to the server
     var newEmail = {
       emailName: emailName.val(),
       emailEmail: emailEmail.val(),
@@ -31,8 +32,8 @@ $(document).ready(function() {
   });
 
   // Submits a new post and brings user to home page upon completion
-  function submitEmail(newEmail) {
-    $.post("/send", newEmail, function() {
+  function submitEmail(Post) {
+    $.post("/send", Post, function() {
         alert("Email has been sent!")
       window.location.href = "/home";
     });

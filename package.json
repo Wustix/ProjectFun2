@@ -1,13 +1,10 @@
 {
-  "name": "app.js",
+  "name": "ProjectFun2",
   "version": "1.0.0",
-  "description": "ProjectFun2",
+  "description": "",
   "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "license": "ISC",
   "dependencies": {
+    "nodemailer": "^4.6.8",
     "array-flatten": "^2.1.1",
     "body-parser": "^1.18.3",
     "content-disposition": "^0.5.2",
@@ -30,10 +27,18 @@
     "sequelize": "^4.38.0",
     "utils-merge": "^1.0.1"
   },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Wustix/ProjectFun2.git"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/Wustix/ProjectFun2/issues"
   },

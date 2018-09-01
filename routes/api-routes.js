@@ -1,12 +1,20 @@
 
 // Requiring our Todo model
 var db = require("../models");
+var nodemailer = require('nodemailer');
+var bodyParser = require("body-parser");
+
 
 // Routes
 // =============================================================
 module.exports = function(app) {
+  
+  app.use(bodyParser.urlencoded({ extended: true }));
+  // parse application/json
+  app.use(bodyParser.json());
 
   app.post('/send', (req, res) => {
+    console.log('successful email post');
     const output = `
       <p>You have a new contact request</p>
       <h3>Contact Details</h3>
@@ -16,9 +24,9 @@ module.exports = function(app) {
         <li>Message: ${req.body.emailMessage}</li>
       </ul>
     `;
-  const emailTo = `
-      ${req.body.emailToEmail}
-  `
+  const emailTo = req.body.emailToEmail
+  console.log(output);
+  console.log(emailTo);
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
