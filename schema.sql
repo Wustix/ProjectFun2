@@ -7,7 +7,7 @@ CREATE DATABASE Reg_Nest_db;
  CREATE TABLE categories (
  	id INTEGER NOT NULL AUTO_INCREMENT,
     category_list VARCHAR (100),
-	name_list varchar(75) NOT NULL,
+	title_list varchar(75) NOT NULL,
 	price_list INTEGER (6),
 	description_list VARCHAR (255),
     email_list VARCHAR (100),

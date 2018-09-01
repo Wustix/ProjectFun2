@@ -10,15 +10,22 @@ router.get("/logout", (req, res) => {
     res.redirect("/");
 });
 // auth with google
+
 router.get("/google", passport.authenticate("google", {
-    scope: ["profile"]
-}));
+    scope: ["profile"]  
+})) 
+
+
+/* router.get("/google"),
+passport.authenticate("google" , { scope: "https://www.google.com/m8/feeds"});
+ */
+
 //   handle with passport
 
 // callback route for google to redirect to
 router.get("/google/redirect", passport.authenticate("google"), (req, res) => {
-
+    console.log("redirecting");
     // res.send(req.user);
-    res.redirect("/profile/");
+    res.send("uri authenticate");
 });
 module.exports = router; 

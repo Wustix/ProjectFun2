@@ -1,11 +1,61 @@
 
 // Requiring our Todo model
 var db = require("../models");
+var bodyParser = require("body-parser");
+var nodemailer = require("nodemailer");
+
 
 // Routes
 // =============================================================
 module.exports = function(app) {
 
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }));
+// parse application/json
+app.use(bodyParser.json());
+
+  app.post('/send', (req, res) => {
+    const output = `
+      <p>You have a new contact request</p>
+      <h3>Contact Details</h3>
+      <ul>  
+        <li>Name: ${req.body.emailName}</li>
+        <li>Email: ${req.body.emailEmail}</li>
+        <li>Message: ${req.body.emailMessage}</li>
+      </ul>
+    `;
+  const emailTo = `
+      ${req.body.emailToEmail}
+  `
+  var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'hotrest123@gmail.com',
+      pass: '1111asdf'
+    }
+  });
+  
+  var mailOptions = {
+    from: 'hotrest123@gmail.com',
+    to: emailTo,
+    subject: 'R Nest Message',
+    text: 'You have a new R Nest message below:',
+    html: output 
+  
+  };
+  console.log(mailOptions);
+  
+  transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  
+  });
+  res.redirect("/home");
+  });
+  
   // GET route for getting all of the posts
   app.get("/api/posts/", function(req, res) {
     db.Post.findAll({})
@@ -43,6 +93,7 @@ module.exports = function(app) {
     console.log(req.body);
     db.Post.create({
       title: req.body.title,
+      email: req.body.email,
       price: req.body.price,
       photo: req.body.photo,
       body: req.body.body,
