@@ -1,5 +1,10 @@
 $(document).ready(function() {
   // blogContainer holds all of our posts
+  $(document).on("click",".emailButton", function(){
+    window.location.href = "/email";
+
+});
+
   var blogContainer = $(".home-container");
   var postCategorySelect = $("#category");
   // Click events for the edit and delete buttons
