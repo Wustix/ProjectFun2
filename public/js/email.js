@@ -1,10 +1,6 @@
 $(document).ready(function() {
 
-    $(document).on("click",".emailButton", function(){
-        window.location.href = "/email";
    
-  });
-
   var form = $("#form");
   var emailName = $("#emailName");
   var emailEmail = $("#emailEmail");
