@@ -5,18 +5,20 @@ var db = require("../models");
 // Routes
 // =============================================================
 module.exports = function(app) {
-  
+
   app.post('/send', (req, res) => {
     const output = `
       <p>You have a new contact request</p>
       <h3>Contact Details</h3>
       <ul>  
-        <li>Name: ${req.body.Name}</li>
-        <li>Email: ${req.body.Email}</li>
-        <li>Message: ${req.body.message}</li>
+        <li>Name: ${req.body.emailName}</li>
+        <li>Email: ${req.body.emailEmail}</li>
+        <li>Message: ${req.body.emailMessage}</li>
       </ul>
     `;
-  
+  const emailTo = `
+      ${req.body.emailToEmail}
+  `
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -27,12 +29,13 @@ module.exports = function(app) {
   
   var mailOptions = {
     from: 'hotrest123@gmail.com',
-    to: 'kc9gpj12@gmail.com',
+    to: emailTo,
     subject: 'R Nest Message',
-    text: 'New Message',
+    text: 'You have a new R Nest message below:',
     html: output 
   
   };
+  console.log(mailOptions);
   
   transporter.sendMail(mailOptions, function(error, info){
     if (error) {
