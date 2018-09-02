@@ -5,7 +5,7 @@ $(document).ready(function() {
   var emailName = $("#emailName");
   var emailEmail = $("#emailEmail");
   var emailMessage= $("#emailMessage");
-  var emailToEmail = $(".emailButton");
+  var emailToEmail = $("#emailButton");
   
   $(form).on("submit", function handleFormSubmit(event) {
     event.preventDefault();
@@ -17,10 +17,10 @@ $(document).ready(function() {
     // }
     // Constructing a newPost object to hand to the database
     var newEmail = {
-      emailName: emailName.val(),
-      emailEmail: emailEmail.val(),
-      emailMessage: emailMessage.val(),
-      emailEmail: emailToEmail.val()
+      Name: emailName.val(),
+      Email: emailEmail.val(),
+      Message: emailMessage.val(),
+      ToEmail: emailToEmail.val()
     };
     console.log(newEmail);
     submitEmail(newEmail);

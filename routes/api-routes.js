@@ -19,13 +19,13 @@ app.use(bodyParser.json());
       <p>You have a new contact request</p>
       <h3>Contact Details</h3>
       <ul>  
-        <li>Name: ${req.body.emailName}</li>
-        <li>Email: ${req.body.emailEmail}</li>
-        <li>Message: ${req.body.emailMessage}</li>
+        <li>Name: ${req.body.Name}</li>
+        <li>Email: ${req.body.Email}</li>
+        <li>Message: ${req.body.Message}</li>
       </ul>
     `;
   const emailTo = `
-      ${req.body.emailToEmail}
+      ${req.body.ToEmail}
   `
   var transporter = nodemailer.createTransport({
     service: 'gmail',
