@@ -1,9 +1,11 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // blogContainer holds all of our posts
+
+  $(document).on("click", ".emailButton", function () {
   $(document).on("click","#emailButton", function(){
     window.location.href = "/email";
 
-});
+  });
 
   var blogContainer = $(".home-container");
   var postCategorySelect = $("#category");
@@ -19,7 +21,7 @@ $(document).ready(function() {
     if (categoryString) {
       categoryString = "/category/" + categoryString;
     }
-    $.get("/api/posts" + categoryString, function(data) {
+    $.get("/api/posts" + categoryString, function (data) {
       console.log("Posts", data);
       posts = data;
       if (!posts || !posts.length) {
@@ -37,7 +39,7 @@ $(document).ready(function() {
       method: "DELETE",
       url: "/api/posts/" + id
     })
-      .then(function() {
+      .then(function () {
         getPosts(postCategorySelect.val());
       });
   }
@@ -62,12 +64,12 @@ $(document).ready(function() {
     newPostCard.addClass("col-sm-4");
     var newPostCardHeading = $("<div>");
     newPostCardHeading.addClass("card-header");
-    // var deleteBtn = $("<button>");
-    // deleteBtn.text("x");
-    // deleteBtn.addClass("delete btn btn-danger");
-    // var editBtn = $("<button>");
-    // editBtn.text("EDIT");
-    // editBtn.addClass("edit btn btn-default");
+    var deleteBtn = $("<button>");
+    deleteBtn.text("x");
+    deleteBtn.addClass("delete btn btn-danger");
+    var editBtn = $("<button>");
+    editBtn.text("EDIT");
+    editBtn.addClass("edit btn btn-default");
     var newPostTitle = $("<h2>");
     var newPostEmail = $("<button>");
     newPostEmail.attr("id", "emailButton");
@@ -77,12 +79,13 @@ $(document).ready(function() {
     var newPostDate = $("<small>");
     var newPostCategory = $("<h5>");
     newPostCategory.text(post.category);
-    newPostCategory.css({
-      float: "right",
-      "font-weight": "700",
-      "margin-top":
-      "-15px"
-    });
+    // newPostCategory.addId("post-card");
+    // newPostCategory.css({
+    //   float: "right",
+    //   "font-weight": "700",
+    //   "margin-top":
+    //     "-15px"
+    // });
     var newPostCardBody = $("<div>");
     newPostCardBody.addClass("card-body");
     var newPostBody = $("<p>");
@@ -90,7 +93,7 @@ $(document).ready(function() {
     newPostEmail.text(post.email);
     newPostPrice.text("$ " + post.price)
     newPostPhoto.attr("src", post.photo)
-    newPostPhoto.css("height", "150px", "width", "150px")
+    // newPostPhoto.css("height", "150px", "width", "150px")
     newPostBody.text(post.body);
     var formattedDate = new Date(post.createdAt);
     formattedDate = moment(formattedDate).format("     MMMM Do YYYY");
@@ -99,8 +102,8 @@ $(document).ready(function() {
     newPostEmail.append(newPostDate);
     newPostPrice.append(newPostDate);
     newPostPhoto.append(newPostDate);
-    // newPostCardHeading.append(deleteBtn);
-    // newPostCardHeading.append(editBtn);
+    newPostCardHeading.append(deleteBtn);
+    newPostCardHeading.append(editBtn);
     newPostCardHeading.append(newPostTitle);
     newPostCardHeading.append(newPostEmail);
     newPostCardHeading.append(newPostPrice);
@@ -113,24 +116,24 @@ $(document).ready(function() {
   }
 
   // This function figures out which post we want to delete and then calls
-  // // deletePost
-  // function handlePostDelete() {
-  //   var currentPost = $(this)
-  //     .parent()
-  //     .parent()
-  //     .data("post");
-  //   deletePost(currentPost.id);
-  // }
+  // deletePost
+  function handlePostDelete() {
+    var currentPost = $(this)
+      .parent()
+      .parent()
+      .data("post");
+    deletePost(currentPost.id);
+  }
 
-  // // This function figures out which post we want to edit and takes it to the
-  // // Appropriate url
-  // function handlePostEdit() {
-  //   var currentPost = $(this)
-  //     .parent()
-  //     .parent()
-  //     .data("post");
-  //   window.location.href = "/form?post_id=" + currentPost.id;
-  // }
+  // This function figures out which post we want to edit and takes it to the
+  // Appropriate url
+  function handlePostEdit() {
+    var currentPost = $(this)
+      .parent()
+      .parent()
+      .data("post");
+    window.location.href = "/form?post_id=" + currentPost.id;
+  }
 
   // This function displays a message when there are no posts
   function displayEmpty() {
