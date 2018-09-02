@@ -1,6 +1,8 @@
 $(document).ready(function () {
   // blogContainer holds all of our posts
+
   $(document).on("click", ".emailButton", function () {
+  $(document).on("click","#emailButton", function(){
     window.location.href = "/email";
 
   });
@@ -70,7 +72,7 @@ $(document).ready(function () {
     editBtn.addClass("edit btn btn-default");
     var newPostTitle = $("<h2>");
     var newPostEmail = $("<button>");
-    newPostEmail.addClass("emailButton");
+    newPostEmail.attr("id", "emailButton");
     newPostEmail.attr("href", "email")
     var newPostPrice = $("<h3>");
     var newPostPhoto = $("<img>");
