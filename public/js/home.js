@@ -4,8 +4,8 @@ $(document).ready(function () {
   var blogContainer = $(".home-container");
   var postCategorySelect = $("#category");
   // Click events for the edit and delete buttons
-  // $(document).on("click", "button.delete", handlePostDelete);
-  // $(document).on("click", "button.edit", handlePostEdit);
+  $(document).on("click", "button.delete", handlePostDelete);
+  $(document).on("click", "button.edit", handlePostEdit);
   postCategorySelect.on("change", handleCategoryChange);
   var posts;
 
@@ -55,7 +55,7 @@ $(document).ready(function () {
   function createNewRow(post) {
     var newPostCard = $("<div>");
     newPostCard.addClass("card");
-    newPostCard.addClass("col-sm-4");
+    newPostCard.addClass("col-sm-6");
     var newPostCardHeading = $("<div>");
     newPostCardHeading.addClass("card-header");
     var deleteBtn = $("<button>");
@@ -73,13 +73,12 @@ $(document).ready(function () {
     var newPostDate = $("<small>");
     var newPostCategory = $("<h5>");
     newPostCategory.text(post.category);
-    // newPostCategory.addId("post-card");
-    // newPostCategory.css({
-    //   float: "right",
-    //   "font-weight": "700",
-    //   "margin-top":
-    //     "-15px"
-    // });
+    newPostCategory.css({
+      float: "right",
+      "font-weight": "700",
+      "margin-top":
+        "-15px"
+    });
     var newPostCardBody = $("<div>");
     newPostCardBody.addClass("card-body");
     var newPostBody = $("<p>");

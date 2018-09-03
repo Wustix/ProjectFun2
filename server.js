@@ -7,9 +7,27 @@
 var express = require("express");
 var passport = require("passport");
 var passportSetup = require("./config/passport-setup.js");
+var mongoose = require("mongoose");
+var keys = require("./config/keys");
+var cookieSession = require("cookie-session");
+var app = express();
+var bodyParser = require('body-parser');
 // Sets up the Express App
 // =============================================================
-var app = express();
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+
+
+// set up view engine
+
+
+app.set("view engine","html");
+app.use(cookieSession({
+    maxAge: 24 * 60 * 60 * 1000,
+    keys: [keys.session.cookieKey]
+}));
 
 // initialize passport
 app.use(passport.initialize());
@@ -31,6 +49,15 @@ require("./routes/html-routes.js")(app);
 app.use("/auth", require("./routes/auth-routes.js"));
 app.use("/profile", require("./routes/profile-routes.js"));
 
+// connect to jawsdb here--may need to tweek this a bit to connect our db
+mongoose.connect(keys.mongo.dbURI, () => {
+    console.log("conected to db");
+});
+
+app.get("/", (req, res) => {
+    res.render("home", { user: req.user });
+});
+
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 db.sequelize.sync().then(function () {
@@ -38,3 +65,15 @@ db.sequelize.sync().then(function () {
     console.log("App listening on PORT " + PORT);
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+

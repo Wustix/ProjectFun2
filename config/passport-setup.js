@@ -13,14 +13,15 @@ passport.deserializeUser((id, done) => {
     });
 });
 passport.use(
-    new GoogleStrategy ({
+    new GoogleStrategy({
         clientID: keys.google.clientID,
         clientSecret: keys.google.clientSecret,
-        callbackURL: "/auth/google/redirect"
+        callbackURL: "http://localhost:8000/auth/google/redirect"
     }, (accessToken, refreshToken, profile, done) => {
-        console.log("tokens",accessToken, refreshToken);
+        console.log("tokens", accessToken, refreshToken);
         //  check if user already exists in our db
         console.log("authnticate with google");
+<<<<<<< HEAD
         User.findOne({ googleId: profile.id }).then((currentUser) => {
             if (currentUser) {
                 // already have the user
@@ -37,5 +38,23 @@ passport.use(
                 });
             }
         }); 
+=======
+        // User.findOne({ googleId: profile.id }).then((currentUser) => {
+        //     if (currentUser) {
+        //         // already have the user
+        //         console.log("user is: ", currentUser);
+        //         done(null, currentUser);
+        //     } else {
+        //         // if not, then create user in our db
+        //         new User({
+        //             username: profile.displayName,
+        //             googleId: profile.id
+        //         }).save().then((newUser) => {
+        //             console.log("new user created: " + newUser);
+        //             done(null.newUser);
+        //         });
+        //     }
+        // });
+>>>>>>> 9e168358f313236cb1d540d7557ffd849c743bdb
     })
 )
