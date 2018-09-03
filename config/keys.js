@@ -5,7 +5,7 @@ module.exports = {
         clientSecret: "DRS8bp2crWJ5MNspU2I5nbmR"
     },
     mongo: {
-        dbURI: "mongodb://<heroku_5pcntrq0>:<Password123!!>@ds137102.mlab.com:37102/heroku_5pcntrq0"
+        dbURI: "mongodb://<root>:<Otis13jhawkhalo>@127.0.0.1:3306/project_2"
     },
     session: {
         cookieKey: "tryandguessmyidformycookieiditwillbeencyrpted"

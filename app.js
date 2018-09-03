@@ -11,7 +11,7 @@ const app = express();
 // set up view engine
 
 
-app.set("view engine","ejs");
+app.set("view engine","html");
 app.use(coookieSession({
     maxAge: 24 * 60 * 60 * 1000,
     keys: [keys.session.cookieKey]
