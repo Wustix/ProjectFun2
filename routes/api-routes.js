@@ -37,7 +37,7 @@ app.use(bodyParser.json());
   
   var mailOptions = {
     from: 'hotrest123@gmail.com',
-    to: emailTo,
+    to: "kc9gpj12@gmail.com",
     subject: 'R Nest Message',
     text: 'You have a new R Nest message below:',
     html: output 

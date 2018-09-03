@@ -5,8 +5,16 @@ $(document).ready(function() {
   var emailName = $("#emailName");
   var emailEmail = $("#emailEmail");
   var emailMessage= $("#emailMessage");
-  var emailToEmail = $("#emailButton");
-  
+  var emailToEmail = $("#theirEmail");
+  // var emailToEmail = [];
+  // console.log(emailToEmail)
+
+  $(document).on("click","#emailButton", function(){
+  // emailToEmail.push($('button').text());
+    window.location.href = "/email";
+
+  });
+
   $(form).on("submit", function handleFormSubmit(event) {
     event.preventDefault();
     // var max_chars = 150;
