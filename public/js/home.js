@@ -1,12 +1,6 @@
 $(document).ready(function () {
   // blogContainer holds all of our posts
 
-  $(document).on("click", ".emailButton", function () {
-  $(document).on("click","#emailButton", function(){
-    window.location.href = "/email";
-
-  });
-
   var blogContainer = $(".home-container");
   var postCategorySelect = $("#category");
   // Click events for the edit and delete buttons
@@ -93,7 +87,7 @@ $(document).ready(function () {
     newPostEmail.text(post.email);
     newPostPrice.text("$ " + post.price)
     newPostPhoto.attr("src", post.photo)
-    // newPostPhoto.css("height", "150px", "width", "150px")
+    newPostPhoto.css("height", "150px", "width", "150px")
     newPostBody.text(post.body);
     var formattedDate = new Date(post.createdAt);
     formattedDate = moment(formattedDate).format("     MMMM Do YYYY");

@@ -25,7 +25,7 @@ app.use(bodyParser.json());
       </ul>
     `;
   const emailTo = `
-      ${req.body.ToEmail}
+       ${req.body.ToEmail}
   `
   var transporter = nodemailer.createTransport({
     service: 'gmail',
