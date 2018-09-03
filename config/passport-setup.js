@@ -21,7 +21,7 @@ passport.use(
         console.log("tokens",accessToken, refreshToken);
         //  check if user already exists in our db
         console.log("authnticate with google");
-        /* User.findOne({ googleId: profile.id }).then((currentUser) => {
+        User.findOne({ googleId: profile.id }).then((currentUser) => {
             if (currentUser) {
                 // already have the user
                 console.log("user is: ", currentUser);
@@ -36,6 +36,6 @@ passport.use(
                     done(null.newUser);
                 });
             }
-        }); */
+        }); 
     })
 )
