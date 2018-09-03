@@ -5,8 +5,14 @@ $(document).ready(function() {
   var emailName = $("#emailName");
   var emailEmail = $("#emailEmail");
   var emailMessage= $("#emailMessage");
-  var emailToEmail = $("#emailButton");
-  
+  var emailToEmail = $("#theirEmail");
+
+
+  $(document).on("click","#emailButton", function(){
+    window.location.href = "/email";
+
+  });
+
   $(form).on("submit", function handleFormSubmit(event) {
     event.preventDefault();
     // var max_chars = 150;
