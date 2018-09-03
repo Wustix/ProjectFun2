@@ -106,7 +106,6 @@ $(document).ready(function () {
     newPostCard.append(newPostCardHeading);
     newPostCard.append(newPostCardBody);
     newPostCard.data("post", post);
-    
     return newPostCard;
   }
 

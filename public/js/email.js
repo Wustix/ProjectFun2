@@ -6,11 +6,9 @@ $(document).ready(function() {
   var emailEmail = $("#emailEmail");
   var emailMessage= $("#emailMessage");
   var emailToEmail = $("#theirEmail");
-  // var emailToEmail = [];
-  // console.log(emailToEmail)
+
 
   $(document).on("click","#emailButton", function(){
-  // emailToEmail.push($('button').text());
     window.location.href = "/email";
 
   });
