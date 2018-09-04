@@ -50,9 +50,9 @@ app.use("/auth", require("./routes/auth-routes.js"));
 app.use("/profile", require("./routes/profile-routes.js"));
 
 // connect to jawsdb here--may need to tweek this a bit to connect our db
-mongoose.connect(keys.mongo.dbURI, () => {
-    console.log("conected to db");
-});
+mongoose.connect(keys.mongo.dbURI, { useNewUrlParser: true });
+     
+
 
 app.get("/", (req, res) => {
     res.render("home", { user: req.user });
