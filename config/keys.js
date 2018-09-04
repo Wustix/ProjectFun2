@@ -5,7 +5,7 @@ module.exports = {
         clientSecret: "DRS8bp2crWJ5MNspU2I5nbmR"
     },
     mongo: {
-        dbURI: "mongodb://<root>:<Otis13jhawkhalo>@127.0.0.1:3306/project_2"
+        dbURI: "mongodb://wroehrman:Otis13jhawkhalo@ds243212.mlab.com:43212/passport1" 
     },
     session: {
         cookieKey: "tryandguessmyidformycookieiditwillbeencyrpted"
