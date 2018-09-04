@@ -15,11 +15,9 @@ router.get("/google", passport.authenticate("google", {
     scope: ["profile"]
 }))
 
-
-router.get("/google"),
-    passport.authenticate("google", { scope: "https://www.google.com/m8/feeds" });
-
-
+ router.get("/google"),
+passport.authenticate("google" , { scope: "https://www.google.com/m8/feeds"});
+ 
 //   handle with passport
 
 // callback route for google to redirect to
