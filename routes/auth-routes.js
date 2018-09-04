@@ -12,13 +12,13 @@ router.get("/logout", (req, res) => {
 // auth with google
 
 router.get("/google", passport.authenticate("google", {
-    scope: ["profile"]  
-})) 
+    scope: ["profile"]
+}))
 
 
-/* router.get("/google"),
-passport.authenticate("google" , { scope: "https://www.google.com/m8/feeds"});
- */
+router.get("/google"),
+    passport.authenticate("google", { scope: "https://www.google.com/m8/feeds" });
+
 
 //   handle with passport
 
