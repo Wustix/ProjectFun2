@@ -16,8 +16,10 @@ router.get("/google", passport.authenticate("google", {
 }))
 
 
-router.get("/google"),
-    passport.authenticate("google", { scope: "https://www.google.com/m8/feeds" });
+
+ router.get("/google"),
+passport.authenticate("google" , { scope: "https://www.google.com/m8/feeds"});
+ 
 
 
 //   handle with passport
