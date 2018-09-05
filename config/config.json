@@ -2,8 +2,8 @@
   "development": {
     "username": "root",
 
-    "password": "root",
-    "database": "Reg_Nest_db",
+    "password": "Otis13jhawkhalo",
+    "database": "Project_2",
 
     "host": "127.0.0.1",
     "port": 3306,

@@ -13,15 +13,10 @@ router.get("/logout", (req, res) => {
 
 router.get("/google", passport.authenticate("google", {
     scope: ["profile"]
-}))
+}));
 
-<<<<<<< HEAD
-// router.get("/google"), passport.authenticate("google", { scope: "https://www.google.com/m8/feeds" });
-
-=======
 //  router.get("/google"), passport.authenticate("google" , { scope: "https://www.google.com/m8/feeds"});
  
->>>>>>> f5bd3498f3eee218f0bdf7ed57bbb496ccf29b4b
 //   handle with passport
 
 // callback route for google to redirect to
