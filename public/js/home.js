@@ -1,7 +1,7 @@
 $(document).ready(function () {
   // blogContainer holds all of our posts
 
-  var blogContainer = $(".home-container");
+  var blogContainer = $("#home-container");
   var postCategorySelect = $("#category");
   // Click events for the edit and delete buttons
   $(document).on("click", "button.delete", handlePostDelete);
@@ -55,7 +55,7 @@ $(document).ready(function () {
   function createNewRow(post) {
     var newPostCard = $("<div>");
     newPostCard.addClass("card");
-    newPostCard.addClass("col-sm-6");
+    newPostCard.addClass("col-sm-4");
     var newPostCardHeading = $("<div>");
     newPostCardHeading.addClass("card-header");
     var deleteBtn = $("<button>");
@@ -81,7 +81,7 @@ $(document).ready(function () {
     });
     var newPostCardBody = $("<div>");
     newPostCardBody.addClass("card-body");
-    var newPostBody = $("<p>");
+    var newPostBody = $("<h2>");
     newPostTitle.text(post.title + " ");
     newPostEmail.text(post.email);
     newPostPrice.text("$ " + post.price)
