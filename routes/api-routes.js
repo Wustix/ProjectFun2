@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
 app.use(bodyParser.json());
 
+// user to user email
   app.post('/send', (req, res) => {
     const output = `
       <p>You have a new contact request</p>
@@ -55,7 +56,47 @@ app.use(bodyParser.json());
   });
   res.redirect("/home");
   });
+
+  // contact us email
+  app.post('/contactSend', (req, res) => {
+    const output = `
+      <p>You have a new contact request</p>
+      <h3>Contact Details</h3>
+      <ul>  
+        <li>Name: ${req.body.Name}</li>
+        <li>Email: ${req.body.Email}</li>
+        <li>Message: ${req.body.Message}</li>
+      </ul>
+    `;
+
+  var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'hotrest123@gmail.com',
+      pass: '1111asdf'
+    }
+  });
   
+  var mailOptions = {
+    from: 'hotrest123@gmail.com',
+    to: 'david.p.hoffmann1@gmail.com',
+    subject: 'R Nest Contact Us Message',
+    text: 'You have a new R Nest contact us message below:',
+    html: output 
+  
+  };
+  console.log(mailOptions);
+  
+  transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+      console.log(error);
+    } else {
+      console.log('Email sent: ' + info.response);
+    }
+  
+  });
+  res.redirect("/home");
+  });
   // GET route for getting all of the posts
   app.get("/api/posts/", function(req, res) {
     db.Post.findAll({})
