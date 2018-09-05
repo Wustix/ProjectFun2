@@ -20,12 +20,14 @@ h1{
   font:bold;
 }
 
+
+
 .side-nav{
   background-color: whitesmoke;
   float: left;
   text-align: left;
   padding-bottom: 100%;
-  /* clear:left; */
+
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -70,14 +72,20 @@ footer {
 }
 
 .g_login{
-  font-size: 50px;
+  font-size: 43px;
   float: left;
-  padding-left: 15px;
-  padding-right: 50px;
+  padding-right: 5px;
+  
+}
+
+.login{
+  font-size: 40px;
+  float: left;
+  padding-right: 5px;
 }
 
 .logout{
-  font-size: 50px;
+  font-size: 40px;
   float: left;
 }
 
