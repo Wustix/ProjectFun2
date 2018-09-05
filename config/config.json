@@ -1,7 +1,6 @@
 {
   "development": {
     "username": "root",
-    
     "password": "Memphis40",
     "database": "Reg_Nes_db",
     "host": "127.0.0.1",
