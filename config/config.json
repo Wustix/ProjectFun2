@@ -1,9 +1,16 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     
     "password": "Otis13jhawkhalo",
     "database": "project_2",
+=======
+
+    "password": "root",
+    "database": "Reg_Nest_db",
+
+>>>>>>> 1a50a0346ccd8ed4771d188bb38d408107323499
     "host": "127.0.0.1",
     "port": 3306,
     "dialect": "mysql"
