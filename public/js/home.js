@@ -55,7 +55,7 @@ $(document).ready(function () {
   function createNewRow(post) {
     var newPostCard = $("<div>");
     newPostCard.addClass("card");
-    newPostCard.addClass("col-sm-4");
+    newPostCard.addClass("col-sm-6");
     var newPostCardHeading = $("<div>");
     newPostCardHeading.addClass("card-header");
     var deleteBtn = $("<button>");

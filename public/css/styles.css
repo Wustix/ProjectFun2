@@ -25,7 +25,7 @@ h1{
   float: left;
   text-align: left;
   padding-bottom: 100%;
-  clear:left;
+  /* clear:left; */
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -34,8 +34,6 @@ h1{
   color: black;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-
-.monkey
 
 footer {
   position: fixed;
@@ -83,11 +81,6 @@ footer {
   float: left;
 }
 
-.a:hover{
-
-}
-
-
 /* form style and text */
 input[type=text], select, textarea {
   width: 100%;
@@ -101,14 +94,10 @@ input[type=text], select, textarea {
   font-family: 'Roboto', sans-serif;
 }
 
-@media (max-width: 700px) {
-  .navbar-header {
-    background-color: whitesmoke;
-  }
  .side-nav {
     border: 0px;
   }
-}
+
 h2 {
   width: 200px;
   font-family: 'Roboto', sans-serif;
