@@ -7,7 +7,7 @@ router.get("/login", (req, res) => {
 // auth log out function/handles with passport-then redirects to homepage
 router.get("/logout", (req, res) => {
     req.logout();
-    res.redirect("/");
+    res.render("logout", { user: req.user });
 });
 // auth with google
 
