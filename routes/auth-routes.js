@@ -1,14 +1,14 @@
 const router = require("express").Router();
 const passport = require("passport");
 // auth login
-router.get("/login", (req, res) => {
-    res.render("login", { user: req.user });
-});
-// auth log out function/handles with passport-then redirects to homepage
-router.get("/logout", (req, res) => {
-    req.logout();
-    res.render("logout", { user: req.user });
-});
+// router.get("/login", (req, res) => {
+//     res.render("login", { user: req.user });
+// });
+// // auth log out function/handles with passport-then redirects to homepage
+// router.get("/logout", (req, res) => {
+//     req.logout();
+//     res.render("logout", { user: req.user });
+// });
 // auth with google
 
 router.get("/google", passport.authenticate("google", {
