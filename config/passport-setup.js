@@ -4,6 +4,10 @@ const keys = require("./keys");
 const User = require("../models/user-model");
 var mongoose = require("mongoose");
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5581babca27b11de1fa7ecb13673c11b1cbab05a
 passport.serializeUser((user, done) => {
     done(null, user.id);
 });
