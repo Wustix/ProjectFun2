@@ -3,6 +3,8 @@ const GoogleStrategy = require("passport-google-oauth20").Strategy
 const keys = require("./keys");
 const User = require("../models/user-model");
 var mongoose = require("mongoose");
+
+
 passport.serializeUser((user, done) => {
     done(null, user.id);
 });
@@ -16,7 +18,7 @@ passport.use(
     new GoogleStrategy({
         clientID: keys.google.clientID,
         clientSecret: keys.google.clientSecret,
-        callbackURL: "http://localhost:8000/auth/google/redirect"
+        callbackURL: "https://reginalds-nest.herokuapp.com/"
     }, (accessToken, refreshToken, profile, done) => {
         console.log("tokens", accessToken, refreshToken);
         //  check if user already exists in our db
