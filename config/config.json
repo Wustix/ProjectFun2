@@ -1,21 +1,15 @@
 {
+  "production": {
+    "username": "lbx7reu44b2wvxsb",
+    "password": "ux9yvirkrfdar7h9",
+    "database": "hmj82t0cjwpu9lri",
+    "host": "l3855uft9zao23e2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
   "development": {
     "username": "root",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-    "password": "Otis13jhawkhalo",
-    "database": "project_2",
-=======
-
-    "password": "root",
-    "database": "Reg_Nest_db",
-=======
-    "password": "Memphis40",
-    "database": "Reg_Nes_db",
->>>>>>> a4f1a779222d2d52061a91d9af2a33f27f8f64a8
-
->>>>>>> 1a50a0346ccd8ed4771d188bb38d408107323499
+    "password": "",
+    "database": "",
     "host": "127.0.0.1",
     "port": 3306,
     "dialect": "mysql"
@@ -26,13 +20,6 @@
     "database": "database_test",
     "host": "127.0.0.1",
     "port": 3306,
-    "dialect": "mysql"
-  },
-  "production": {
-    "username": "lbx7reu44b2wvxsb",
-    "password": "ux9yvirkrfdar7h9",
-    "database": "hmj82t0cjwpu9lri",
-    "host": "l3855uft9zao23e2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   }
 }
