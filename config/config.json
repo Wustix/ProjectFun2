@@ -1,9 +1,8 @@
 {
   "development": {
     "username": "root",
-
-    "password": "root",
-    "database": "Reg_Nest_db",
+    "password": "Memphis40",
+    "database": "Reg_Nes_db",
 
     "host": "127.0.0.1",
     "port": 3306,
