@@ -72,11 +72,25 @@ footer {
 }
 
 .g_login{
-  font-size: 43px;
+  font-size: 45px;
   float: left;
   padding-right: 5px;
+
+  
   
 }
+
+#g_login{
+  font-size: 70px;
+  float: left;
+  padding-right: 5px;
+  padding:30px;
+  
+  
+}
+
+
+
 
 .login{
   font-size: 40px;
