@@ -8,15 +8,8 @@
   },
   "development": {
     "username": "root",
-<<<<<<< HEAD
-
-    "password": "Otis13jhawkhalo",
-    "database": "Project_2",
-
-=======
     "password": "",
     "database": "",
->>>>>>> 5581babca27b11de1fa7ecb13673c11b1cbab05a
     "host": "127.0.0.1",
     "port": 3306,
     "dialect": "mysql"
