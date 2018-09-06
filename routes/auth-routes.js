@@ -5,9 +5,9 @@ router.get("/login", (req, res) => {
     res.render("login", { user: req.user });
 });
 // auth log out function/handles with passport-then redirects to homepage
-router.get("/logout", (req, res) => {
+router.get("/v2/logout?federated", (req, res) => {
     req.logout();
-    res.render("logout", { user: req.user });
+    res.redirect("/");
 });
 // auth with google
 
