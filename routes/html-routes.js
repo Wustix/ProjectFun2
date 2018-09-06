@@ -7,7 +7,7 @@ var path = require("path");
 module.exports = function (app) {
 
   app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/home.html"));
+    res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 
   app.get("/form", function (req, res) {
@@ -21,4 +21,9 @@ module.exports = function (app) {
   app.get("/email", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/email.html"));
   });
+
+  app.get("/login", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/login.html"));
+  });
+  
 };

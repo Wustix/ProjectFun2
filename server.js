@@ -55,7 +55,7 @@ mongoose.connect(keys.mongo.dbURI, { useNewUrlParser: true });
 
 
 app.get("/", (req, res) => {
-    res.render("home", { user: req.user });
+    res.render("login", { user: req.user });
 });
 
 // Syncing our sequelize models and then starting our Express app
