@@ -20,12 +20,14 @@ h1{
   font:bold;
 }
 
+
+
 .side-nav{
   background-color: whitesmoke;
   float: left;
   text-align: left;
   padding-bottom: 100%;
-  clear:left;
+
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -34,8 +36,6 @@ h1{
   color: black;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-
-.monkey
 
 footer {
   position: fixed;
@@ -72,21 +72,22 @@ footer {
 }
 
 .g_login{
-  font-size: 50px;
+  font-size: 43px;
   float: left;
-  padding-left: 15px;
-  padding-right: 50px;
+  padding-right: 5px;
+  
+}
+
+.login{
+  font-size: 40px;
+  float: left;
+  padding-right: 5px;
 }
 
 .logout{
-  font-size: 50px;
+  font-size: 40px;
   float: left;
 }
-
-.a:hover{
-
-}
-
 
 /* form style and text */
 input[type=text], select, textarea {
@@ -101,14 +102,10 @@ input[type=text], select, textarea {
   font-family: 'Roboto', sans-serif;
 }
 
-@media (max-width: 700px) {
-  .navbar-header {
-    background-color: whitesmoke;
-  }
  .side-nav {
     border: 0px;
   }
-}
+
 h2 {
   width: 200px;
   font-family: 'Roboto', sans-serif;

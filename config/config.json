@@ -2,6 +2,7 @@
   "development": {
     "username": "root",
 <<<<<<< HEAD
+<<<<<<< HEAD
     
     "password": "Otis13jhawkhalo",
     "database": "project_2",
@@ -9,6 +10,10 @@
 
     "password": "root",
     "database": "Reg_Nest_db",
+=======
+    "password": "Memphis40",
+    "database": "Reg_Nes_db",
+>>>>>>> a4f1a779222d2d52061a91d9af2a33f27f8f64a8
 
 >>>>>>> 1a50a0346ccd8ed4771d188bb38d408107323499
     "host": "127.0.0.1",
