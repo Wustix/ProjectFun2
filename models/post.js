@@ -36,7 +36,7 @@ module.exports = function (sequelize, DataTypes) {
     },
     category: {
       type: DataTypes.STRING,
-      defaultValue: "All Categories"
+      defaultValue: "Personals"
     }
   });
   return Post;
