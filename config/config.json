@@ -1,9 +1,9 @@
 {
   "production": {
-    "username": "lbx7reu44b2wvxsb",
-    "password": "ux9yvirkrfdar7h9",
-    "database": "hmj82t0cjwpu9lri",
-    "host": "l3855uft9zao23e2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "kar7a4x6e4b6hyvg",
+    "password": "t96s2hl6wchlcbw6",
+    "database": "enl0hctvouyayfvo",
+    "host": "iwqrvsv8e5fz4uni.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "development": {
