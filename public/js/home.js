@@ -89,7 +89,7 @@ $(document).ready(function () {
     newPostPhoto.css("height", "150px", "width", "150px")
     newPostBody.text(post.body);
     var formattedDate = new Date(post.createdAt);
-    formattedDate = moment(formattedDate).format("     MMMM Do YYYY");
+    formattedDate = moment(formattedDate).format("MMMM Do YYYY");
     newPostDate.text(formattedDate);
     newPostTitle.append(newPostDate);
     newPostEmail.append(newPostDate);
