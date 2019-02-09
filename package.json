@@ -18,6 +18,7 @@
     "express": "^4.16.3",
     "finalhandler": "^1.1.1",
     "fresh": "^0.5.2",
+    "lodash": "^4.17.11",
     "merge-descriptors": "^1.0.1",
     "methods": "^1.1.2",
     "mongodb": "^3.1.4",
